@@ -642,3 +642,33 @@ p, div {
             -o-transform: translateX(6px);
             transform: translateX(6px);
         }
+
+	/* Basic styling for the slider container */
+        .slider-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Styling for individual slides */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hide all slides except the first one */
+        .slide:not(:first-child) {
+            transform: translateX(100%);
+        }
+
+        /* Disable user selection on slides */
+        .slide img {
+            user-select: none;
+        }
